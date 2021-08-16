@@ -23,9 +23,6 @@ int main() {
 			pHand = --inpt;
 	}
 	cHand = rand() % 3;
-#ifdef DEBUG
-	printf("inpt:%d pHand:%d cHand:%d\n", inpt, pHand, cHand); //Prints all variables
-#endif
 	if(pHand > cHand || (pHand == ROCK && cHand == SCISSORS)){
 		printf("You win!\n");
 		return 0;
