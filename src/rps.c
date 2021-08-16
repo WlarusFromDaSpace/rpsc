@@ -12,15 +12,11 @@ int main() {
 	srand((unsigned long)time(NULL));
 	while(pHand == -1){
 		printf("Please choose one of the following: 1) Rock, 2) Paper or 3) Scissors\n:");
-		inpt = (int)getc(stdin);
-		if(inpt == 49)
-			pHand = ROCK;
-		else if(inpt == 50)
-			pHand = PAPER;
-		else if(inpt == 51)
-			pHand = SCISSORS;
+		inpt = (int)getc(stdin) - 49;
+		if(inpt < 0 || inpt > 2)
+			printf("Unknown input.\n");
 		else
-			pHand = --inpt;
+			pHand = inpt;
 	}
 	cHand = rand() % 3;
 	if(pHand > cHand || (pHand == ROCK && cHand == SCISSORS)){

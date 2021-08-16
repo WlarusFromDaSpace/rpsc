@@ -1,7 +1,7 @@
 .PHONY: compile clean
 
 CC=gcc
-CFLAGS=-Wall -Werror -Wpedantic -O2
+CFLAGS=-std=c99 -Wall -Werror -Wextra -Wpedantic -O2
 LDFLAGS=
 
 compile:
